@@ -1,5 +1,6 @@
 @php
     /** @var \App\Models\BlogCategory $item */
+    /** @var \Illuminate\Database\Eloquent\Collection $categoryList */
 @endphp
 <div class="row justify-content-center">
     <div class="col-md-12">
@@ -41,7 +42,7 @@
                                 @foreach($categoryList as $categoryOption)
                                     <option value="{{ $categoryOption->id }}"
                                         @if($categoryOption->id == $item->parent_id) selected @endif>
-                                        {{ $categoryOption->id }}. {{ $categoryOption->title }}
+                                        {{ $categoryOption->id_title }}
                                     </option>
                                 @endforeach
                                 </select>
@@ -51,7 +52,7 @@
                                 <textarea name="description"
                                           id="description"
                                           rows="3"
-                                          class="form-control">{{ $item->description }}</textarea>
+                                          class="form-control">{{ old('description', $item->description) }}</textarea>
                             </div>
                         </div>
                     </div>
