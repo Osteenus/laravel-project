@@ -2,7 +2,8 @@
 
 @section('content')
     @php /** @var \App\Models\BlogCategory $item */ @endphp
-    @if($item->exist)
+
+    @if($item->exists)
         <form method="POST" action="{{ route('blog.admin.categories.update', $item->id) }}">
         @method('PATCH')
     @else

@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9d06c0f-6a85-4fcf-8d03-b5acea107513" name="Default Changelist" comment="" />
+    <list default="true" id="f9d06c0f-6a85-4fcf-8d03-b5acea107513" name="Default Changelist" comment="video 45 category relations;">
+      <change afterPath="$PROJECT_DIR$/app/DesignPatterns/Fundamental/PropertyContainer/BlogPost.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/DesignPatterns/Fundamental/PropertyContainer/Interfaces/PropertyContainerInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/DesignPatterns/Fundamental/PropertyContainer/PropertyContainer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/DiggingDeeperController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/BlogPostCreateRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Jobs/GenerateCatalog/GenerateCatalogMainJob.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/BlogCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/BlogCategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/BlogPost.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/BlogPost.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Observers/BlogCategoryObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/BlogCategoryObserver.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Observers/BlogPostObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/BlogPostObserver.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/BlogCategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/BlogCategoryRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/queue.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/queue.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blog/admin/categories/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/admin/categories/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blog/admin/categories/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/admin/categories/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blog/admin/posts/includes/result_messages.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/admin/posts/includes/result_messages.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blog/admin/posts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/admin/posts/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +36,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="JsBowerSettings">
     <node-interpreter value="project" />
@@ -153,38 +182,67 @@
       <path value="$PROJECT_DIR$/vendor/league/commonmark" />
       <path value="$PROJECT_DIR$/vendor/facade/ignition-contracts" />
       <path value="$PROJECT_DIR$/vendor/facade/ignition" />
+      <path value="$PROJECT_DIR$/vendor/laravel/ui" />
     </include_path>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1nbyFlBvVqKwXYDZBgsMnfVK8jd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test.local" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Requests" />
+      <recent name="$PROJECT_DIR$/resources/views/blog/admin/posts" />
+      <recent name="$PROJECT_DIR$/app/Repositories" />
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/Blog/Admin" />
       <recent name="Z:\project.local\config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/blog/admin/posts/includes" />
+      <recent name="$PROJECT_DIR$/app" />
       <recent name="Z:\project.local\app\Http\Controllers\Blog" />
       <recent name="Z:\project.local\app\Models" />
       <recent name="Z:\project.local\app\Models\Models" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.BlogPostObserver.php">
+    <configuration name="BlogPostObserver.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/project.local/Observers/BlogPostObserver.php" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner configuration_file="/data/project.local/phpunit.xml" scope="XML" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.BlogPostObserver.php" />
+      </list>
+    </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -204,108 +262,62 @@
       <workItem from="1612032617521" duration="1507000" />
       <workItem from="1612209486396" duration="1505000" />
       <workItem from="1612272387479" duration="42485000" />
+      <workItem from="1615043984962" duration="22943000" />
+      <workItem from="1615567224343" duration="25687000" />
+      <workItem from="1616352765443" duration="1876000" />
+      <workItem from="1616354733635" duration="1391000" />
+      <workItem from="1616441914203" duration="1317000" />
+      <workItem from="1616443737104" duration="1777000" />
+      <workItem from="1616445546151" duration="1847000" />
+      <workItem from="1616447472743" duration="482000" />
+      <workItem from="1616521985113" duration="13000" />
+      <workItem from="1616527789103" duration="556000" />
+      <workItem from="1616529321781" duration="195000" />
+      <workItem from="1616529614941" duration="16000" />
+      <workItem from="1616529837144" duration="18000" />
+      <workItem from="1616529878590" duration="14000" />
+      <workItem from="1616530155824" duration="45000" />
+      <workItem from="1616530222093" duration="2569000" />
+      <workItem from="1616614761528" duration="2799000" />
+      <workItem from="1616961082699" duration="44850000" />
+      <workItem from="1617910727662" duration="29025000" />
+      <workItem from="1618686132306" duration="5806000" />
+      <workItem from="1618947548218" duration="9262000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="464" y="60" key="#CLI_Interpreters" timestamp="1611853146791">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="464" y="60" key="#CLI_Interpreters/0.0.1536.824@0.0.1536.824" timestamp="1611853146791" />
-    <state x="516" y="212" key="#Composer" timestamp="1611861613965">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="516" y="212" key="#Composer/0.0.1536.824@0.0.1536.824" timestamp="1611861613965" />
-    <state x="602" y="65" key="#SSH_Configurations" timestamp="1611780015964">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="602" y="65" key="#SSH_Configurations/0.0.1536.824@0.0.1536.824" timestamp="1611780015964" />
-    <state x="221" y="53" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611861774944">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="221" y="53" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1611861774944" />
-    <state x="614" y="185" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper" timestamp="1611840803450">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="614" y="185" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/0.0.1536.824@0.0.1536.824" timestamp="1611840803450" />
-    <state x="599" y="227" width="568" height="298" key="#com.jetbrains.php.debug.validation.PhpWebServerValidationDialog#" timestamp="1611864462338">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="599" y="227" width="568" height="298" key="#com.jetbrains.php.debug.validation.PhpWebServerValidationDialog#/0.0.1536.824@0.0.1536.824" timestamp="1611864462338" />
-    <state x="753" y="155" key="EnvironmentVariablesDialog" timestamp="1611864000378">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="753" y="155" key="EnvironmentVariablesDialog/0.0.1536.824@0.0.1536.824" timestamp="1611864000378" />
-    <state x="664" y="159" key="FileChooserDialogImpl" timestamp="1611864440640">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="664" y="159" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1611864440640" />
-    <state width="1466" height="241" key="GridCell.Tab.0.bottom" timestamp="1612558656195">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1466" height="241" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612558656195" />
-    <state width="1466" height="241" key="GridCell.Tab.0.center" timestamp="1612558656195">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1466" height="241" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1612558656195" />
-    <state width="1466" height="241" key="GridCell.Tab.0.left" timestamp="1612558656195">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1466" height="241" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1612558656195" />
-    <state width="1466" height="241" key="GridCell.Tab.0.right" timestamp="1612558656195">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1466" height="241" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1612558656195" />
-    <state width="1466" height="241" key="GridCell.Tab.1.bottom" timestamp="1612558656195">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1466" height="241" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612558656195" />
-    <state width="1466" height="241" key="GridCell.Tab.1.center" timestamp="1612558656195">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1466" height="241" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1612558656195" />
-    <state width="1466" height="241" key="GridCell.Tab.1.left" timestamp="1612558656195">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1466" height="241" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1612558656195" />
-    <state width="1466" height="241" key="GridCell.Tab.1.right" timestamp="1612558656195">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1466" height="241" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1612558656195" />
-    <state x="548" y="134" key="NewPhpClassDialog" timestamp="1612903345922">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="548" y="134" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1612903345922" />
-    <state x="602" y="322" key="NewPhpFileDialog" timestamp="1611847328867">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="602" y="322" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1611847328867" />
-    <state x="393" y="50" key="SettingsEditor" timestamp="1613163831932">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="393" y="50" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1613163831932" />
-    <state x="745" y="302" width="419" height="201" key="WebDeployment.AddServerDialog.v.1" timestamp="1611864459264">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="745" y="302" width="419" height="201" key="WebDeployment.AddServerDialog.v.1/0.0.1536.824@0.0.1536.824" timestamp="1611864459264" />
-    <state x="679" y="279" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration" timestamp="1611861476498">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="679" y="279" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration/0.0.1536.824@0.0.1536.824" timestamp="1611861476498" />
-    <state x="848" y="183" key="ftp.server.browser" timestamp="1611861609850">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="848" y="183" key="ftp.server.browser/0.0.1536.824@0.0.1536.824" timestamp="1611861609850" />
-    <state x="423" y="182" key="run.anything.popup" timestamp="1611869128155">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="423" y="182" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1611869128155" />
-    <state x="482" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1612472389275">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="482" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1612472389275" />
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="posts added" />
+    <MESSAGE value="video 45 category relations;" />
+    <option name="LAST_COMMIT_MESSAGE" value="video 45 category relations;" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

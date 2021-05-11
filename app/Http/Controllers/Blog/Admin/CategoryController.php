@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Blog\Admin;
 use App\Http\Requests\BlogCategoryCreateRequest;
 use App\Http\Requests\BlogCategoryUpdateRequest;
 use App\Models\BlogCategory;
+use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Repositories\BlogCategoryRepository;
 
@@ -36,7 +37,8 @@ class CategoryController extends BaseController
     public function index()
     {
         // $paginator = BlogCategory::paginate(20);
-        $paginator = $this->blogCategoryRepository->getAllWithPaginate(5);
+        $paginator = $this->blogCategoryRepository->getAllWithPaginate(10);
+        // dd($paginator);
         return view('blog.admin.categories.index', compact('paginator'));
     }
 
@@ -47,7 +49,7 @@ class CategoryController extends BaseController
      */
     public function create()
     {
-        $item = new BlogCategory();
+        $item = BlogCategory::make();
         $categoryList = $this->blogCategoryRepository->getForComboBox();
 
         return view('blog.admin.categories.edit', compact('item', 'categoryList'));
@@ -56,22 +58,26 @@ class CategoryController extends BaseController
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  Request  $request
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(BlogCategoryCreateRequest $request)
     {
         $data = $request->input();
 
-        if (empty($data['slug'])) {
-            $data['slug'] = Str::slug($data['title']);
-        }
+        /*
+         * ушло в обсервер
+         *
+         * if (empty($data['slug'])) {
+            $data['slug'] = str_slug($data['title']);
+        }*/
+
         // Create object but do not add to the DB
         // $item = new BlogCategory($data);
         // $item->save();
 
         // Create object and add to the DB
-        $item = (new BlogCategory())->create($data);
+        $item = (new BlogCategory())::create($data);
 
 
         if ($item) {
@@ -92,6 +98,22 @@ class CategoryController extends BaseController
     public function edit($id)
     {
         $item = $this->blogCategoryRepository->getEdit($id);
+
+//        $v['title_before'] = $item->title;
+//        $item->title = 'Gchfiufo ig iuy iuuu uji 1212';
+//
+//        $v['title_after'] = $item->title;
+//        $v['getAttribute'] = $item->getAttribute('title');
+//        $v['attributesToArray'] = $item->attributesToArray();
+//        // $v['attributes'] = $item->attributes['title'];
+//        $v['getAttributeValue'] = $item->getAttributeValue('title');
+//        $v['getMutatedAttributes'] = $item->getMutatedAttributes();
+//        $v['hasGetMutator for title'] = $item->hasGetMutator('title');
+//        $v['toArray'] = $item->toArray();
+
+//         dd($item);
+
+
         if (empty($item)) {
             abort(404);
         }
@@ -101,36 +123,15 @@ class CategoryController extends BaseController
         return view('blog.admin.categories.edit', compact('item', 'categoryList'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\RedirectResponse
-     */
-    public function update(BlogCategoryUpdateRequest $request, $id)
+        /**
+         * Update the specified resource in storage.
+         *
+         * @param BlogCategoryUpdateRequest $request
+         * @param int $id
+         * @return \Illuminate\Http\RedirectResponse
+         */
+    public function update(BlogCategoryUpdateRequest $request, int $id)
     {
-        /*$rules = [
-            'title'         => 'required|min:5|max:200',
-            'slug'          => 'max:200',
-            'description'   => 'string|max:500|min:3',
-            'parent_id'     => 'required|integer|exists:blog_categories,id',
-        ];
-
-        // $validatedData = $this->validate($request, $rules);
-
-        // $validatedData = $request->validate($rules);
-
-        /*$validator = \Validator::make($request->all(), $rules);
-
-        $validatedData[] = $validator->passes();
-        $validatedData[] = $validator->valid();
-        $validatedData[] = $validator->failed();
-        $validatedData[] = $validator->errors();
-        $validatedData[] = $validator->fails();
-
-        dd($validatedData);*/
-
         $item = $this->blogCategoryRepository->getEdit($id);
 
         if (empty($item)) {
@@ -141,9 +142,12 @@ class CategoryController extends BaseController
 
         $data = $request->all();
 
-        if (empty($data['slug'])) {
+        /*
+         * ушло в обсервер
+         *
+         * if (empty($data['slug'])) {
             $data['slug'] = str_slug($data['title']);
-        }
+        }*/
 
         $result = $item->update($data);
 

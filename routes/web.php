@@ -41,6 +41,16 @@ Route::group($groupData, function () {
         ->names('blog.admin.posts');
 });
 
+Route::group(['prefix' => 'digging_deeper', ], function () {
+    Route::get('collections', 'App\Http\Controllers\DiggingDeeperController@collections')
+        ->name('digging_deeper.collections');
+});
+
+Route::group(['prefix' => 'fundamentals'], function () {
+    Route::get('property-container', [\App\Http\Controllers\FundamentalPatternsController::class, 'PropertyContainer'])
+    ->name('fundamentals.property-container');
+});
+
 // Route::resource('rest', 'App\Http\Controllers\RestTestController');
 
 

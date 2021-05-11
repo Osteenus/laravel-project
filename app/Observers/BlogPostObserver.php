@@ -8,13 +8,7 @@ use Illuminate\Support\Str;
 
 class BlogPostObserver
 {
-    public function creating(BlogPost $blogPost)
-    {
-        $this->setPublishedAt($blogPost);
-        $this->setSlug($blogPost);
-    }
-
-    /**
+     /**
      * @param BlogPost $blogPost
      */
     public function updating(BlogPost $blogPost)
@@ -32,13 +26,25 @@ class BlogPostObserver
         $this->setSlug($blogPost);
 
     }
+
+    public function creating(BlogPost $blogPost)
+    {
+        $this->setPublishedAt($blogPost);
+
+        $this->setSlug($blogPost);
+
+        $this->setHtml($blogPost);
+
+        $this->setUser($blogPost);
+    }
+
     /**
      * Handle the BlogPost "created" event.
      *
-     * @param  \App\Models\BlogPost  $BlogPost
+     * @param  \App\Models\BlogPost  $blogPost
      * @return void
      */
-    public function created(BlogPost $BlogPost)
+    public function created(BlogPost $blogPost)
     {
         //
     }
@@ -46,32 +52,43 @@ class BlogPostObserver
     /**
      * Handle the BlogPost "updated" event.
      *
-     * @param  \App\Models\BlogPost  $BlogPost
+     * @param  \App\Models\BlogPost  $blogPost
      * @return void
      */
-    public function updated(BlogPost $BlogPost)
+    public function updated(BlogPost $blogPost)
     {
         //
+    }
+
+    /**
+     * Handle the BlogPost "deleting" event.
+     *
+     * @param  \App\Models\BlogPost  $blogPost
+     * @return void
+     */
+    public function deleting(BlogPost $blogPost)
+    {
+        //dd(__METHOD__, $blogPost);
     }
 
     /**
      * Handle the BlogPost "deleted" event.
      *
-     * @param  \App\Models\BlogPost  $BlogPost
+     * @param  \App\Models\BlogPost  $blogPost
      * @return void
      */
-    public function deleted(BlogPost $BlogPost)
+    public function deleted(BlogPost $blogPost)
     {
-        //
+        // dd(__METHOD__, $blogPost);
     }
 
     /**
      * Handle the BlogPost "restored" event.
      *
-     * @param  \App\Models\BlogPost  $BlogPost
+     * @param  \App\Models\BlogPost  $blogPost
      * @return void
      */
-    public function restored(BlogPost $BlogPost)
+    public function restored(BlogPost $blogPost)
     {
         //
     }
@@ -79,14 +96,19 @@ class BlogPostObserver
     /**
      * Handle the BlogPost "force deleted" event.
      *
-     * @param  \App\Models\BlogPost  $BlogPost
+     * @param  \App\Models\BlogPost  $blogPost
      * @return void
      */
-    public function forceDeleted(BlogPost $BlogPost)
+    public function forceDeleted(BlogPost $blogPost)
     {
         //
     }
 
+    /**
+     * Установить дату публикации, если это поле пустое и статья опубликована
+     *
+     * @param BlogPost $blogPost
+     */
     protected function setPublishedAt(BlogPost $blogPost)
     {
         $needSetPublished = empty($blogPost->published_at) && $blogPost['is_published'];
@@ -95,10 +117,38 @@ class BlogPostObserver
         }
     }
 
+    /**
+     * Установить slug по полю title
+     *
+     * @param BlogPost $blogPost
+     */
     protected function setSlug(BlogPost $blogPost)
     {
         if (empty($blogPost['slug'])) {
             $blogPost['slug'] = Str::slug($blogPost['title']);
         }
+    }
+
+    /**
+     * Установить значению поля content_html относительно поля content_raw
+     *
+     * @param BlogPost $blogPost
+     */
+    protected function setHtml(BlogPost $blogPost)
+    {
+        if ($blogPost->isDirty('content_raw')) {
+            // TODO:  тут должна быть генерация markdown -> html
+            $blogPost->content_html = $blogPost->content_raw;
+        }
+    }
+
+    /**
+     * Если не указан user_id, то устанавливается пользователем по-умолчанию
+     *
+     * @param BlogPost $blogPost
+     */
+    protected function setUser(BlogPost $blogPost)
+    {
+        $blogPost->user_id = auth()->id ?? BlogPost::UNKNOWN_USER;
     }
 }

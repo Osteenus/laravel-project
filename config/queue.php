@@ -38,6 +38,7 @@ return [
             'driver' => 'database',
             'table' => 'jobs',
             'queue' => 'default',
+            // https://toster.ru/q/661335
             'retry_after' => 90,
         ],
 
